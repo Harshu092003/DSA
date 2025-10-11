@@ -3,19 +3,20 @@ class Solution:
         n = len(nums)
         result = [1] * n
 
-        # Left pass: result[i] contains product of all elements to the left
-        left_product = 1
-        for i in range(n):
-            result[i] = left_product
-            left_product *= nums[i]
+        # Prefix: product of all elements to the left
+        for i in range(1, n):
+            result[i] = result[i - 1] * nums[i - 1]
 
-        # Right pass: multiply result[i] by product of all elements to the right
-        right_product = 1
-        for i in range(n - 1, -1, -1):
-            result[i] *= right_product
-            right_product *= nums[i]
+        # Suffix: product of all elements to the right
+        suffix =1
+        for i in range(n - 2, -1, -1):
+            suffix *= nums[i + 1]
+            result[i] *= suffix
+
 
         return result
+
+            
 
 
 nums = [1,2,3,4]
