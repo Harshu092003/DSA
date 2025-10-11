@@ -14,8 +14,8 @@ def binary_exponentiation(x: int, n: int) -> int:
 
     return result
 
+
 # Example usage:
 x = 2
 n = 10
 print(binary_exponentiation(x, n))  # Output: 1024
-

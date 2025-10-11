@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def nextPermutation(self, nums: List[int]) -> None:
         # S Find first decreasing element from the right
@@ -16,7 +17,7 @@ class Solution:
             nums[i], nums[j] = nums[j], nums[i]
 
         #  Reverse the remaining right half
-        nums[i + 1:] = reversed(nums[i + 1:])
+        nums[i + 1 :] = reversed(nums[i + 1 :])
 
 
 nums = [1, 2, 3]
