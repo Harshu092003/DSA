@@ -1,25 +1,26 @@
-# Python program to find triplet with sum zero
-# using three nested loops
+class Solution:
+    def three_sum(self,arr : list[int]) -> list[list[int]] :
+        arr.sort() #[-4,-1,-1,0,1,2]
+        result = []
+        for i in range(len(arr)):
+            if i > 0 and arr[i] == arr [i-1]:
+                continue
+            left = i+1 
+            right= len(arr)-1
+            while left < right :
+                total = arr[i] + arr[left] + arr[right]
+                if total < 0 :
+                    left +=1
+                if total > 0 :
+                    right -=1
+                if total == 0:
+                    result.append([arr[i],arr[left],arr[right]])
+                    left += 1  
+                    right -=1
+                    while left < right and arr[left] == arr[left+1] :
+                        left +=1
+        return result
 
-def findTriplets(arr):
-    res = []
-    n = len(arr)
 
-    # Generating all triplets
-    for i in range(n - 2):
-        for j in range(i + 1, n - 1):
-            for k in range(j + 1, n):
-              
-                # If the sum of triplet equals to zero
-                # then add it's indexes to the result
-                if arr[i] + arr[j] + arr[k] == 0:
-                    a = arr[i]
-                    b = arr[j]
-                    c = arr[k]
-                    res.append([a,b,c])
-    return res
-
-arr = [0, -1, 2, -3, 1]
-res = findTriplets(arr)
-for triplet in res:
-    print(triplet[0], triplet[1], triplet[2])
+arr = [-1,0,1,2,-1,-4]
+print(Solution().three_sum(arr))
