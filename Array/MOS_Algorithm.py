@@ -15,4 +15,3 @@ def printQuerySum(arr,Q):
 arr = [1, 1, 2, 1, 3, 4, 5, 2, 8]
 Q = [[0, 4], [1, 3], [2, 4]]
 printQuerySum(arr,Q)
-#This code is contributed by Shivam Singh
