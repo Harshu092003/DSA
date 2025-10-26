@@ -6,7 +6,7 @@ class Solution:
             if input[i] == " ":
                 result += "0"
             else:
-                position = ord(input[i]) - ord('A')
+                position = ord(input[i]) - ord('A') # ord method gets the ASCII value for upper A to Z is(65-90) , for lower(a-z) is (97-122)
                 result += arr[position]
         
         return int(result)
