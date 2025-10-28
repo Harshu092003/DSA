@@ -8,6 +8,7 @@ def pairInSortedRotated(arr, target):
 
     return False, None  # No pair found
 
+
 if __name__ == "__main__":
     arr = [11, 15, 6, 8, 9, 10]
     target = 16

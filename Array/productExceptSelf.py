@@ -8,20 +8,13 @@ class Solution:
             result[i] = result[i - 1] * nums[i - 1]
 
         # Suffix: product of all elements to the right
-        suffix =1
+        suffix = 1
         for i in range(n - 2, -1, -1):
             suffix *= nums[i + 1]
             result[i] *= suffix
 
-
         return result
 
-            
 
-
-nums = [1,2,3,4]
+nums = [1, 2, 3, 4]
 print(Solution().productExceptSelf(nums))
-        
-
-
-

@@ -6,11 +6,9 @@ class Solution:
             if word in result:
                 result[word] += 1  # increment count if seen before
             else:
-                result[word] = 1   # first occurrence, set count = 1
+                result[word] = 1  # first occurrence, set count = 1
 
-        return {ch:count for ch,count in result.items() if count>1 }
-
-        
+        return {ch: count for ch, count in result.items() if count > 1}
 
 
 s = "geeksforgeeks"

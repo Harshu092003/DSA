@@ -1,11 +1,14 @@
 def getBit(num, i):
     return (num & (1 << i)) != 0
 
+
 def setBit(num, i):
     return num | (1 << i)
 
+
 def clearBit(num, i):
     return num & ~(1 << i)
+
 
 if __name__ == "__main__":
     number = 43  # binary: 00101011
@@ -26,7 +29,6 @@ if __name__ == "__main__":
     for bit_pos in range(8):
         new_num = clearBit(number, bit_pos)
         print(f"  Clear bit {bit_pos}: {new_num} (bin: {bin(new_num)})")
-
 
 
 # Example: if X=1010₂ (binary 10)

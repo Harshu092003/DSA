@@ -3,14 +3,15 @@ def combinations(arr, r, start=0, curr=[]):
     if len(curr) == r:
         print(*curr)
         return
-    
+
     # Recursive case: pick each element starting from 'start'
     for i in range(start, len(arr)):
         # Include arr[i] and move forward
         combinations(arr, r, i + 1, curr + [arr[i]])
 
+
 # Example
-arr = [1, 2, 3, 4,5]
+arr = [1, 2, 3, 4, 5]
 r = 2
 combinations(arr, r)
 

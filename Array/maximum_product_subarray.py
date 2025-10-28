@@ -1,5 +1,6 @@
 from typing import List
 
+
 class Solution:
     def maxProduct(self, nums: list[int]) -> int:
         max_so_far = min_so_far = result = nums[0]
@@ -10,6 +11,6 @@ class Solution:
             result = max(result, max_so_far)
         return result
 
-    
-nums = [2,3,-2,4]
+
+nums = [2, 3, -2, 4]
 print(Solution().maxProduct(nums))
