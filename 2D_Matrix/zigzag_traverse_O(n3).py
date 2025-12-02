@@ -6,6 +6,7 @@ class Solution:
         result = []
         rows = len(matrix)
         cols = len(matrix[0])
+        print(rows, cols)
 
         for d in range(rows + cols - 1):
             for i in range(rows):
